@@ -10,7 +10,7 @@ RSpec.describe Spree::PagesController, type: :controller do
     let(:page) { create(:page) }
 
     context 'with page slug' do
-      let(:path) { page.slug[1..-1] }
+      let(:path) { page.slug }
 
       it { is_expected.to be_success }
 

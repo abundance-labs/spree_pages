@@ -7,13 +7,12 @@ RSpec.describe Spree::Page, type: :model do
     end
   end
 
-  describe '#prefix_slug_with_slash' do
-    let(:page) { build(:page) }
+  describe '#remove_leading_slash_from_slug' do
+    let(:page) { build(:page, slug: '/slash') }
 
     it 'adds slash to all slugs' do
-      page.slug = 'noslash'
       page.save
-      expect(page.slug).to eq '/noslash'
+      expect(page.slug).to eq 'slash'
     end
   end
 end

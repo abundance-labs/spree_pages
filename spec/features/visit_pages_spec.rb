@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe 'Visits page', type: :feature do
   before { create(:store, default: true) }
 
-  it 'corretcly loads page/' do
+  it 'correctly loads page' do
     spree_page = create(:page, slug: 'page')
     visit '/page'
     expect(page).to have_text spree_page.title

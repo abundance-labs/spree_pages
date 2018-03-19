@@ -23,7 +23,7 @@
         <tr data-hook="admin_pages_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id page %>">
           <td><%= page.title %></td>
           <td class="actions text-right" data-hook="admin_pages_index_row_actions">
-            <%= link_to 'Show in app', page_path(page.slug), target: '_blank' %>
+            <%= link_to 'Show in app', page_url(page.slug), target: '_blank' %>
             <%= link_to_edit page, no_text: true %>
             <%= link_to_delete page, no_text: true %>
           </td>

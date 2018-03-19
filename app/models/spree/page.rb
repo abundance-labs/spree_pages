@@ -3,10 +3,10 @@ module Spree
     validates :title, :slug, :content, presence: true
     validates :slug, uniqueness: true
 
-    before_save :prefix_slug_with_slash
+    before_save :remove_leading_slash_from_slug
 
-    def prefix_slug_with_slash
-      slug.prepend('/') unless slug.start_with?('/') # ensure that all slugs start with a slash
+    def remove_leading_slash_from_slug
+      self.slug = slug[1..-1] if slug.start_with?('/') # ensure that slugs don't start with a slash
     end
   end
 end
