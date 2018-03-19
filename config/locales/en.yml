@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      spree/page:
+        one: Page
+        other: Pages
+  spree:
+    pages:
+      new_page: New page
+

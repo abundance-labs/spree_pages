@@ -1,0 +1,31 @@
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.4
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/Appraisals'
+  Exclude:
+    - 'spec/dummy/**/*'
+    - 'lib/generators/**/*'
+
+Rails:
+  Enabled: true
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 150
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spree_pages.gemspec'
+
+# DISABLED
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
