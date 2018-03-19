@@ -2,7 +2,7 @@
 
 <%= form_for [:admin, resource] do |f| %>
   <div class="row" data-hook="admin_page_form_fields">
-    <div class="col-md-6" data-hook="admin_page_form_left">
+    <div class="col-md-6">
       <div class="form-group">
         <%= f.label :title %> <span class="required">*</span>
         <%= f.text_field :title, class: 'form-control' %>
@@ -12,7 +12,9 @@
         <%= f.label :slug %> <span class="required">*</span>
         <%= f.text_field :slug, class: 'form-control' %>
       </div>
+    </div>
 
+    <div class="col-md-12">
       <div class="form-group">
         <%= f.label :content %> <span class="required">*</span>
         <%= f.text_area :content, rows: 12, class: 'form-control' %>
