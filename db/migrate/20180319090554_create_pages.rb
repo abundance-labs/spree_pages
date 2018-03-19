@@ -1,4 +1,4 @@
-class CreatePages < ActiveRecord::Migration[5.1]
+class CreatePages < ActiveRecord::Migration[5.0]
   def change
     create_table :spree_pages do |t|
       t.string :title, null: false
