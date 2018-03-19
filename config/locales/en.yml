@@ -5,6 +5,6 @@ en:
         one: Page
         other: Pages
   spree:
-    pages:
-      new_page: New page
+    pages: Page
+    new_page: New page
 
