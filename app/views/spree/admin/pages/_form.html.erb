@@ -39,6 +39,11 @@
           <%= image_tag resource.meta_image.url(:small) %>
         <% end %>
       </div>
+
+      <div class="form-group">
+        <%= f.label :live %>
+        <%= f.check_box :live %>
+      </div>
     </div>
   </div>
 

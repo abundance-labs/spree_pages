@@ -7,3 +7,6 @@ Metrics/BlockLength:
 
 Style/BlockDelimiters:
   Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5

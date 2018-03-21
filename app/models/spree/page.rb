@@ -6,6 +6,8 @@ module Spree
     validates :title, :slug, :content, presence: true
     validates :slug, uniqueness: true
 
+    scope :live, -> { where(live: true) }
+
     before_save :remove_leading_slash_from_slug
 
     def remove_leading_slash_from_slug
