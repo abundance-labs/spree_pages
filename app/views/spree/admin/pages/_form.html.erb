@@ -20,6 +20,26 @@
         <%= f.text_area :content, rows: 12, class: 'form-control' %>
       </div>
     </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :meta_title %>
+        <%= f.text_field :meta_title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :meta_description %>
+        <%= f.text_field :meta_description, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :meta_image %>
+        <%= f.file_field :meta_image %>
+        <% if resource.meta_image.exists? %>
+          <%= image_tag resource.meta_image.url(:small) %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
   <%= render "spree/admin/shared/#{resource.new_record? ? 'new' : 'edit'}_resource_links" %>
