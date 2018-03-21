@@ -1,4 +1,4 @@
-class AddMetaFieldsToPages < ActiveRecord::Migration[5.1]
+class AddMetaFieldsToPages < ActiveRecord::Migration[5.0]
   def change
     add_column :spree_pages, :meta_title, :string
     add_column :spree_pages, :meta_description, :string
