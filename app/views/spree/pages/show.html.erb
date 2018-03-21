@@ -1,6 +1,6 @@
-<% cache([:v2, @page]) do %>
-  <%= render partial: 'og_meta_tags', locals: { page: @page } %>
+<%= render partial: 'og_meta_tags', locals: { page: @page } %>
 
+<% cache([:v3, @page]) do %>
   <center><h2><%= @page.title %></h2></center>
   <br>
   <div id='page_content'>
