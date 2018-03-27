@@ -2,7 +2,7 @@
 
 # Spree Pages
 
-Simplified version of `spree_static_pages` without locasation overhead
+Simplified version of `spree_static_pages` without localisation overhead
 
 ## Installation
 
