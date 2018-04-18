@@ -1,5 +1,6 @@
-sudo: required
+sudo: false
 dist: trusty
+cache: bundler
 
 language: ruby
 
@@ -18,15 +19,17 @@ script:
   - bundle exec rake spec
 
 rvm:
-  - 2.5.0
-  - 2.4.3
-  - 2.3.6
+  - 2.5
+  - 2.4
+  - 2.3
 
 matrix:
   allow_failures:
     - gemfile: gemfiles/spree_master.gemfile
 
 before_install:
+  - gem update --system
+  - gem install bundler
   - mysql -u root -e "GRANT ALL ON *.* TO 'travis'@'%';"
 
 before_script:
