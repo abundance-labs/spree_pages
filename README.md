@@ -1,4 +1,8 @@
+<!-- markdownlint-disable MD041 -->
 [![Build Status](https://travis-ci.org/public-market/spree_pages.svg?branch=master)](https://travis-ci.org/public-market/spree_pages)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5af5e44f4cf49e9f6f9b/maintainability)](https://codeclimate.com/github/public-market/spree_pages/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5af5e44f4cf49e9f6f9b/test_coverage)](https://codeclimate.com/github/public-market/spree_pages/test_coverage)
+<!-- markdownlint-enable MD041 -->
 
 # Spree Pages
 
@@ -8,58 +12,58 @@ Simplified version of `spree_static_pages` without localisation overhead
 
 1. Add this extension to your Gemfile with this line:
 
-  ```ruby
-  gem 'spree_pages', github: 'public-market/spree_pages'
-  ```
+    ```ruby
+    gem 'spree_pages', github: 'public-market/spree_pages'
+    ```
 
-2. Install the gem using Bundler:
+1. Install the gem using Bundler:
 
-  ```ruby
-  bundle install
-  ```
+    ```ruby
+    bundle install
+    ```
 
-3. Copy & run migrations
+1. Copy & run migrations
 
-  ```ruby
-  bundle exec rails g spree_pages:install
-  ```
+    ```ruby
+    bundle exec rails g spree_pages:install
+    ```
 
-4. Restart your server
+1. Restart your server
 
-  If your server was running, restart it so that it can find the assets properly.
+    If your server was running, restart it so that it can find the assets properly.
 
 ## Adding WYSIWYG (example: ckeditor)
 
 1. Install ckeditor:
 
-https://github.com/galetahub/ckeditor#installation
+    https://github.com/galetahub/ckeditor#installation
 
-2. Add ckeditor to js:
+1. Add ckeditor to js:
 
-In our case it's `vendor/assets/javascripts/spree/backend/all.js`
+    In our case it's `vendor/assets/javascripts/spree/backend/all.js`
 
-Add this line before `//= require_tree .`
+    Add this line before `//= require_tree .`
 
-```javascript
-//= require ckeditor/init
-```
+    ```javascript
+    //= require ckeditor/init
+    ```
 
-3. Add ckeditor to necessary fields in forms:
+1. Add ckeditor to necessary fields in forms:
 
-Create new js file `ckeditorInit.js` in `vendor/assets/javascripts/spree/backend`
+    Create new js file `ckeditorInit.js` in `vendor/assets/javascripts/spree/backend`
 
-```javascript
-$(function() {
-  var editableIds = ['page_content']
-  editableIds.forEach(function(id) {
-    if ($("#" + id).length) {
-      CKEDITOR.replace(id);
-    }
-  })
-});
-```
+    ```javascript
+    $(function() {
+      var editableIds = ['page_content']
+      editableIds.forEach(function(id) {
+        if ($("#" + id).length) {
+          CKEDITOR.replace(id);
+        }
+      })
+    });
+    ```
 
-This script will add ckeditor to all fields with ids from `editableIds` array. In this case it's `page_content`
+    This script will add ckeditor to all fields with ids from `editableIds` array. In this case it's `page_content`
 
 ## Testing
 
