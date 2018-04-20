@@ -4,7 +4,7 @@ FactoryBot.define do
     content { generate(:random_description) }
 
     meta_title { generate(:random_string) }
-    meta_description { generate(:random_description) }
+    meta_description { generate(:random_string) }
 
     sequence(:slug) { |n| "page#{n}" }
 
