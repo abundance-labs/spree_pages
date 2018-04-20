@@ -1,5 +1,5 @@
 RSpec.describe Spree::Page, type: :model do
-  let!(:page) { build_stubbed(:page) }
+  let(:page) { build_stubbed(:page) }
 
   describe 'factory' do
     it 'is valid' do
@@ -14,5 +14,13 @@ RSpec.describe Spree::Page, type: :model do
       page.save
       expect(page.slug).to eq 'slash'
     end
+  end
+
+  describe '#meta_image' do
+    subject(:image) { page.meta_image }
+
+    let(:page) { build_stubbed(:page, :with_image) }
+
+    it { expect(image.styles).to include(:large, :medium, :small) }
   end
 end
