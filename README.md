@@ -1,10 +1,8 @@
-<!-- markdownlint-disable MD041 -->
-[![Build Status](https://travis-ci.org/public-market/spree_pages.svg?branch=master)](https://travis-ci.org/public-market/spree_pages)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5af5e44f4cf49e9f6f9b/maintainability)](https://codeclimate.com/github/public-market/spree_pages/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5af5e44f4cf49e9f6f9b/test_coverage)](https://codeclimate.com/github/public-market/spree_pages/test_coverage)
-<!-- markdownlint-enable MD041 -->
-
 # Spree Pages
+
+[![Build Status](https://travis-ci.org/abundance-labs/spree_pages.svg?branch=master)](https://travis-ci.org/abundance-labs/spree_pages)
+[![Maintainability](https://api.codeclimate.com/v1/badges/091271e9215d80067064/maintainability)](https://codeclimate.com/github/abundance-labs/spree_pages/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/091271e9215d80067064/test_coverage)](https://codeclimate.com/github/abundance-labs/spree_pages/test_coverage)
 
 Simplified version of `spree_static_pages` without localisation overhead
 
