@@ -1,3 +1,5 @@
+![Abundance Labds](.github/AbundanceLabs_readme_banner.png)
+
 # Spree Pages
 
 [![Build Status](https://travis-ci.org/abundance-labs/spree_pages.svg?branch=master)](https://travis-ci.org/abundance-labs/spree_pages)
